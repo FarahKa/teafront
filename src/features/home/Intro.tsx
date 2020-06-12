@@ -1,7 +1,11 @@
 import React from "react";
-import { Info } from "./Info";
 
-export const Intro = () => {
+interface IProps {
+  setInfo : (i : boolean) => void;
+}
+
+export const Intro : React.FC<IProps> = ({setInfo}) => {
+
   const pad: React.CSSProperties = {
     padding: "10px",
     margin: "10px",
@@ -24,7 +28,7 @@ export const Intro = () => {
             <div className="col-md-3"></div>
             <div className="col-md-8">
               <p>
-                <button type="button" className="btn btn-outline-success" style={pad}>
+                <button onClick={() => setInfo(true)} type="button" className="btn btn-outline-success" style={pad}>
                   More Info
                 </button>
                 <button type="button" className="btn btn-outline-info" style={pad}>

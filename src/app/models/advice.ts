@@ -4,4 +4,5 @@ export interface IAdvice {
     text:string;
     tags:string;
     date: string;
+    response: string;
 }

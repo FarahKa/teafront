@@ -1,6 +1,10 @@
 import React from "react";
 
-export const Info = () => {
+interface IProps {
+  setInfo : (i:boolean) => void;
+}
+
+export const Info : React.FC<IProps> = ({setInfo}) => {
   return (
     <div>
       <div className="container">
